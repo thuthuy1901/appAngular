@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   public name: string = 'Thuy';
   public age: number = 25;
+
+  public resetName(): void {
+    this.name = 'Thuy';
+  }
 }
