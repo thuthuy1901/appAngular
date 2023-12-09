@@ -1,5 +1,7 @@
 <div class="test">
-  <p>Hi {{ name }}</p>
-  <h2 *ngIf="age > 18">Già</h2>
-  <h2 *ngIf="age < 18">Trẻ</h2>
+  <p>Age {{ age }}</p>
+  <input type="number" [(ngModel)]="age" />
+  <div *ngIf="age <= 18; then tre; else gia"></div>
+  <ng-template #gia>Già</ng-template>
+  <ng-template #tre>Trẻ</ng-template>
 </div>
