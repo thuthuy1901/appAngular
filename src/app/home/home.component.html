@@ -1,3 +1,8 @@
 <div class="test">
   <p>Hi {{ name }}</p>
+  <label for="">C1</label>
+  <input value="{{ name }}" title="ten {{ name }}" />
+  <br />
+  <label for="">C2</label>
+  <input [value]="name" [title]="'ten ' + name" />
 </div>
