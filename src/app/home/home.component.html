@@ -1,8 +1,5 @@
 <div class="test">
   <p>Hi {{ name }}</p>
-  <label for="">C1</label>
-  <input value="{{ name }}" title="ten {{ name }}" />
-  <br />
-  <label for="">C2</label>
-  <input [value]="name" [title]="'ten ' + name" />
+  <h2 *ngIf="age > 18">Già</h2>
+  <h2 *ngIf="age < 18">Trẻ</h2>
 </div>
