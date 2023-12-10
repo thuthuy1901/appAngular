@@ -1,26 +1,12 @@
 <div class="test">
-  <h3>Fuits</h3>
-  <div *ngFor="let item of traiCay; let i = index">
-    <p>{{ i + 1 }}. {{ item }}</p>
-  </div>
-  <table class="table">
-    <tr>
-      <th>STT</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Sale</th>
-    </tr>
-    <tr *ngFor="let item of traiCay2; let i = index">
-      <td>{{ i + 1 }}</td>
-      <td>{{ item.name | uppercase }}</td>
-      <td class="right">
-        <span [ngClass]="{ negative: item.price < 0 }">
-          {{ item.price | currency : "VND" : "symbol" : "1.0-0" }}
-        </span>
-      </td>
-      <td>
-        <span>{{ item.sale | onSale | uppercase }}</span>
-      </td>
-    </tr>
-  </table>
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let city of VN; let i = index" [value]="city.city">
+      {{ city.city }}
+    </option>
+  </select>
+  <select id="districts">
+    <option *ngFor="let district of districts" [value]="district">
+      {{ district }}
+    </option>
+  </select>
 </div>
