@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Service/common.service';
 
 @Component({
   selector: 'app-home',
@@ -59,8 +60,15 @@ export class HomeComponent implements OnInit {
     // C2
     this.districts = this.VN.find((data) => data.city == city)?.district || [];
   }
+  public couter = 0;
+  public couterBinhPhuong = 0;
+  public test = 0;
+
+  constructor(private common: CommonService) {}
 
   public ngOnInit(): void {
-    console.log(this.VN);
+    this.couter = this.common.couter;
+    this.couterBinhPhuong = this.common.binhPhuong(this.couter);
+    this.common.couter++;
   }
 }

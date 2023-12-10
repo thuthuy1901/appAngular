@@ -1,4 +1,8 @@
 <div class="test">
+  <span>Couter: {{ couter }}</span>
+  <br />
+  <span>CouterBinhPhuong: {{ couterBinhPhuong }}</span>
+  <br />
   <select id="city" (change)="changeCity($event)">
     <option *ngFor="let city of VN; let i = index" [value]="city.city">
       {{ city.city }}
