@@ -12,15 +12,14 @@
     </tr>
     <tr *ngFor="let item of traiCay2; let i = index">
       <td>{{ i + 1 }}</td>
-      <td>{{ item.name }}</td>
+      <td>{{ item.name | uppercase }}</td>
       <td class="right">
-        <span [ngClass]="{ negative: item.price < 0 }">{{ item.price }}</span>
+        <span [ngClass]="{ negative: item.price < 0 }">
+          {{ item.price | currency : "VND" : "symbol" : "1.0-0" }}
+        </span>
       </td>
       <td>
-        <!-- <div *ngIf="item.sale == true; then sale; else none"></div>
-        <ng-template #sale>Sale</ng-template>
-        <ng-template #none>None</ng-template> -->
-        <span *ngIf="item.sale == true">Sale</span>
+        <span>{{ item.sale | onSale | uppercase }}</span>
       </td>
     </tr>
   </table>

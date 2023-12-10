@@ -10,10 +10,10 @@ export class HomeComponent implements OnInit {
   public age: number = 18;
   public traiCay: string[] = ['táo', 'nho'];
   public traiCay2: { name: string; price: number; sale: boolean }[] = [
-    { name: 'táo', price: 12, sale: true },
-    { name: 'nho', price: -12, sale: false },
-    { name: 'táo', price: 12, sale: true },
-    { name: 'nho', price: -12, sale: false },
+    { name: 'táo', price: 12000, sale: true },
+    { name: 'nho', price: -10002, sale: false },
+    { name: 'táo', price: 12000000, sale: true },
+    { name: 'nho', price: -10002, sale: false },
   ];
 
   public ngOnInit(): void {
