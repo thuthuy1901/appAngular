@@ -16,4 +16,7 @@ export class CommonService {
   public setCouter(n: number) {
     this.couter = n;
   }
+  public submitData(name: any): void {
+    console.log('name: ', name);
+  }
 }
